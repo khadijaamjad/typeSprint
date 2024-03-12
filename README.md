@@ -21,6 +21,7 @@ TypeSprint selects a passage for you to type. As you type, it monitors your spee
 
 - `React.js`
 - `TypeScript`
+- `Tailwind CSS`
 
 ## ⏯ Running the Project
 
@@ -30,6 +31,9 @@ To run the project locally, follow these steps:
 2. Run `npm install` or `yarn` in the project directory to install dependencies.
 3. Run `npm run start` or `yarn start` to start the project.
 4. Open [http://localhost:5173](http://localhost:5173) (or the specified address in your console) in your browser to view the app.
+
+- Documentation for using Tailwind CSS in Vite + ReactJS project is [here](https://tailwindcss.com/docs/guides/vite)
+
 
 ## 📈 Improvements
 
