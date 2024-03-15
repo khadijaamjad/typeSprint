@@ -1,0 +1,30 @@
+export const RandomText = [
+  "The sun rose above the horizon, casting a golden glow over the land.",
+  "As the sun rose above the horizon, its golden rays spread across the landscape, illuminating everything in its path with a warm and gentle glow, casting long shadows that stretched out before them, creating a mesmerizing scene that seemed almost magical in its beauty and tranquility.",
+  "The sound of birds chirping greeted them as they stepped outside.",
+  "In today's rapidly evolving tech landscape, staying updated with the latest advancements is crucial for professionals to remain competitive and relevant in their fields, necessitating a continuous learning mindset and a proactive approach to skill development.",
+  "As cybersecurity threats continue to proliferate and become increasingly sophisticated, organizations must prioritize robust security measures, including encryption protocols, multi-factor authentication, and regular vulnerability assessments, to safeguard sensitive data and mitigate the risks of breaches and cyberattacks.",
+  "Quantum computing represents a paradigm shift in computational power, leveraging the principles of quantum mechanics to perform complex calculations exponentially faster than classical computers, promising breakthroughs in cryptography, optimization, and scientific research, while facing obstacles such as error correction, qubit coherence, and scalability on the path to practical applications.",
+  "The vastness of space, with its countless galaxies, stars, and celestial bodies, captivates our imagination and inspires exploration beyond the confines of Earth, driving scientific inquiry and technological advancements that unlock the mysteries of the cosmos and expand our understanding of the universe's origins, evolution, and potential for life.",
+  "As digital transformation initiatives accelerate across industries, organizations are increasingly leveraging data analytics, machine learning, and predictive modeling techniques to derive actionable insights from vast datasets, driving informed decision-making, personalized customer experiences, and operational efficiencies, while grappling with data privacy concerns, ethical considerations, and regulatory compliance requirements.",
+  "The emergence of blockchain technology has disrupted traditional business models and introduced decentralized systems that offer transparency, immutability, and enhanced security for transactions, revolutionizing industries such as finance, supply chain management, and healthcare with applications ranging from cryptocurrency and smart contracts to digital identity verification and provenance tracking.",
+  "Data analytics drives informed decisions and insights for businesses worldwide.",
+  "Artificial intelligence, with its ability to analyze vast amounts of data and extract valuable insights, is revolutionizing industries by automating processes, optimizing operations, and driving innovation across sectors ranging from healthcare and finance to manufacturing and retail, fundamentally transforming the way businesses operate and deliver value in today's digital age.",
+  "The delicate balance of nature, with its interconnected ecosystems and biodiversity, sustains life on Earth by providing essential resources, regulating climate patterns, and supporting the intricate web of species that coexist and depend on each other for survival, highlighting the importance of conservation efforts, environmental stewardship, and sustainable practices to preserve the planet's natural beauty and ecological harmony for future generations.",
+  "The awe-inspiring beauty of the natural world, with its majestic mountains, pristine forests, and breathtaking landscapes, instills a sense of wonder and reverence for the Earth's wonders, fostering a deep connection to the environment and a desire to protect and preserve its fragile ecosystems, habitats, and biodiversity for the benefit of all living beings and future generations to come.",
+  "The mysteries of the deep sea, with its unexplored depths and diverse marine life, beckon researchers and explorers to uncover its secrets and unravel the complexities of underwater ecosystems, ecosystems, and habitats that harbor unique species, geological formations, and biological processes that hold valuable insights into the origins of life and the interconnectedness of all living things on Earth.",
+  "The resilience of life in extreme environments, from the harsh deserts of the Sahara to the frigid landscapes of Antarctica, showcases the adaptability and tenacity of organisms to survive and thrive in the most challenging conditions, highlighting the remarkable diversity and ingenuity of nature's creations and the resilience of the human spirit to overcome adversity and flourish in the face of adversity.",
+  "In an increasingly interconnected world, cybersecurity plays a crucial role in safeguarding sensitive information, critical infrastructure, and intellectual property from a myriad of evolving threats such as malware, ransomware, and social engineering attacks, necessitating robust security measures, proactive threat detection mechanisms, and ongoing security awareness training to mitigate risks and ensure resilience against cyber threats.",
+  "Edge computing, by bringing computation and data storage closer to the source of data generation and consumption, enables low-latency processing, real-time analytics, and autonomous decision-making at the network edge, facilitating applications such as autonomous vehicles, industrial automation, and smart infrastructure that require rapid response times and localized processing capabilities, while also addressing bandwidth constraints, privacy concerns, and regulatory requirements associated with centralized cloud architectures."
+];
+
+export enum Values {
+  Timer = 30
+}
+
+export const Remarks = {
+  Low: "You can do better. Keep trying! 👍",
+  Average: "Almost there! Keep sprinting! ⚡",
+  High: "Nice! You're a pro! ⭐",
+  Perfect: "You are on fire! 🔥"
+};
