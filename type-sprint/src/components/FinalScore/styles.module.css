@@ -1,0 +1,38 @@
+.container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #22223B;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container p {
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  border: 1px solid #e1e6eb;
+  border-radius: 5px;
+  color: #333;
+}
+
+.container p span {
+  font-weight: bold;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container p {
+    border: none;
+    background-color: #333333;
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  }
+}

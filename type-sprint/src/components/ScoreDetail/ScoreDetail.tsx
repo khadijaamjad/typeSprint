@@ -1,6 +1,6 @@
 type ScoreDetailProps = {
   description: string;
-  value: number;
+  value: number | string;
 };
 
 export default function ScoreDetail({ description, value }: ScoreDetailProps) {
