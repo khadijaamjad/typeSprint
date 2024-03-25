@@ -61,6 +61,7 @@ export default function App() {
       }, 1000);
     } else if (timer <= 0) {
       setIsCompleted(true);
+      setEndTime(Date.now());
     }
 
     return () => {
@@ -100,8 +101,8 @@ export default function App() {
   };
 
   const calculatePercentage = (mistakes: number) => {
-    const textLength = currentText.length;
-    const isEligible = enteredText.length > 0;
+    const textLength = enteredText.length;
+    const isEligible = textLength > 0;
 
     const percentage = isEligible
       ? ((textLength - mistakes) / textLength) * 100
@@ -129,8 +130,8 @@ export default function App() {
       <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
         {isCompleted ? (
           <FinalScore
-            WPM={calculateWPM(startTime, endTime, currentText)}
-            totalCharacters={currentText.length}
+            WPM={calculateWPM(startTime, endTime, enteredText)}
+            charactersTyped={enteredText.length}
             mistakes={mistakes}
             scoreEarned={scoreEarned}
             restartGame={restartGame}

@@ -1,6 +1,5 @@
 import { LegacyRef } from "react";
 import styles from "./styles.module.css";
-import DarkModeButton from "../DarkModeButton/DarkModeButton";
 
 type GameScreenProps = {
   currentText: string;

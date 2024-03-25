@@ -4,7 +4,7 @@ import { getRemarks } from "../../utils/helpers";
 
 type FinalScoreProps = {
   WPM: number;
-  totalCharacters: number;
+  charactersTyped: number;
   mistakes: number;
   scoreEarned: number;
   restartGame: () => void;
@@ -12,7 +12,7 @@ type FinalScoreProps = {
 
 export default function FinalScore({
   WPM,
-  totalCharacters,
+  charactersTyped,
   mistakes,
   scoreEarned,
   restartGame
@@ -32,20 +32,25 @@ export default function FinalScore({
               </h3>
             </div>
 
-            <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-              <ScoreDetail description="words per minute" value={WPM} />
+            <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5">
+              <ScoreDetail
+                description="characters typed"
+                value={charactersTyped}
+              />
 
               <ScoreDetail
                 description="characters correct"
-                value={totalCharacters - mistakes}
+                value={charactersTyped - mistakes}
               />
+
+              <ScoreDetail description="mistakes" value={mistakes} />
 
               <ScoreDetail
                 description="score earned"
                 value={`${scoreEarned.toFixed(1)} %`}
               />
 
-              <ScoreDetail description="mistakes" value={mistakes} />
+              <ScoreDetail description="words per minute" value={WPM} />
             </dl>
           </div>
         </div>

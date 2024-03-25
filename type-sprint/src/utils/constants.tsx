@@ -19,12 +19,12 @@ export const RandomText = [
 ];
 
 export enum Values {
-  Timer = 30
+  Timer = 60
 }
 
 export const Remarks = {
   Low: "You can do better. Keep trying! 👍",
   Average: "Almost there! Keep sprinting! ⚡",
   High: "Nice! You're a pro! ⭐",
-  Perfect: "You are on fire! 🔥"
+  Perfect: "Superb! You are on fire! 🔥"
 };
