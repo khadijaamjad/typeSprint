@@ -1,0 +1,66 @@
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.details div {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.text {
+  width: 60vw;
+  text-align: center;
+}
+
+.correctChar,
+.incorrectChar,
+.untypedChar,
+.spaceChar {
+  line-height: 1.6;
+  word-spacing: 5px;
+  font-size: calc(22   / 16 * 1rem);
+}
+
+.correctChar {
+  color: black;
+}
+
+.incorrectChar {
+  color: rgb(211, 30, 30);
+}
+
+.untypedChar {
+  color: gray;
+}
+
+.spaceChar {
+  color: gray;
+}
+
+@media (prefers-color-scheme: dark) {
+  .details div {
+    color: white;
+  }
+
+  .correctChar {
+    color: white;
+  }
+
+  .incorrectChar {
+    color: rgb(255, 78, 78);
+  }
+
+  .untypedChar {
+    color: #646669;
+  }
+
+  .spaceChar {
+    color: #646669;
+  }
+}
