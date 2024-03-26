@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import { useAppStore } from "./utils/store";
 import { calculateWPM } from "./utils/helpers";
 import { RandomText, Values } from "./utils/constants";
-import { StartPrompt, FinalScore, GameScreen } from "./components";
+import { HowToPlay, FinalScore, GameScreen } from "./components";
 
 export default function App() {
   const { scoreEarned, setScoreEarned } = useAppStore();
@@ -23,13 +23,13 @@ export default function App() {
   const [startTime, setStartTime] = useState<number | null>(null);
   const [endTime, setEndTime] = useState<number | null>(null);
 
+  const focusInput = () => {
+    setIsFocused(true);
+    inputRef.current?.focus();
+  };
+
   useEffect(() => {
     setCurrentText(RandomText[Math.floor(Math.random() * RandomText.length)]);
-
-    const focusInput = () => {
-      setIsFocused(true);
-      inputRef.current?.focus();
-    };
 
     const handleClick = () => focusInput();
 
@@ -125,31 +125,33 @@ export default function App() {
 
   return (
     <div className={styles.wrapper}>
-      {!isFocused && <StartPrompt />}
-
-      <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
-        {isCompleted ? (
-          <FinalScore
-            WPM={calculateWPM(startTime, endTime, enteredText)}
-            charactersTyped={enteredText.length}
-            mistakes={mistakes}
-            scoreEarned={scoreEarned}
-            restartGame={restartGame}
-          />
-        ) : (
-          <GameScreen
-            currentText={currentText}
-            input={enteredText}
-            timer={timer}
-            isCompleted={isCompleted}
-            mistakes={mistakes}
-            scoreEarned={scoreEarned}
-            capsLock={isCapsLockOn}
-            inputRef={inputRef}
-            handleChange={handleChange}
-          />
-        )}
-      </div>
+      {!isFocused ? (
+        <HowToPlay startGame={focusInput} />
+      ) : (
+        <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
+          {isCompleted ? (
+            <FinalScore
+              WPM={calculateWPM(startTime, endTime, enteredText)}
+              charactersTyped={enteredText.length}
+              mistakes={mistakes}
+              scoreEarned={scoreEarned}
+              restartGame={restartGame}
+            />
+          ) : (
+            <GameScreen
+              currentText={currentText}
+              input={enteredText}
+              timer={timer}
+              isCompleted={isCompleted}
+              mistakes={mistakes}
+              scoreEarned={scoreEarned}
+              capsLock={isCapsLockOn}
+              inputRef={inputRef}
+              handleChange={handleChange}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }
