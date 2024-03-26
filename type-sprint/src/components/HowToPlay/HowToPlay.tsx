@@ -24,7 +24,7 @@ export default function HowToPlay({ startGame }: HowToPlayProps) {
           </svg>
 
           <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">
-            How we work?
+            How it works
           </h2>
         </div>
 
