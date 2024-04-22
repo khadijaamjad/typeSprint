@@ -34,7 +34,7 @@ export default function StartPrompt() {
 
   return (
     <div
-      className={`${styles.container} bg-gradient-to-tr from-[#C9ADA7] via-[#9A8C98] to-[#4A4E69]`}
+      className={`${styles.container} bg-gradient-to-tr from-silver-pink via-spanish-gray to-blue-gray`}
     >
       <h1 className="text-4xl font-bold" id="typewriter">
         {words[wordIndex].substring(0, charIndex)}

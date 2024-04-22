@@ -9,7 +9,7 @@ export default function ScoreDetail({ description, value }: ScoreDetailProps) {
       <dt className="text-sm font-semibold leading-6 text-gray-300">
         {description}
       </dt>
-      <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+      <dd className="order-first md:text-3xl sm:text-xl font-semibold tracking-tight text-white">
         {value}
       </dd>
     </div>

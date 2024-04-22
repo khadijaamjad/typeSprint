@@ -55,7 +55,7 @@ export default function GameScreen({
             {" "}
           </span>
         );
-        
+
         inputIndex++;
       }
     });
@@ -64,36 +64,42 @@ export default function GameScreen({
   };
 
   return (
-    <div>
-      <div className={styles.details}>
-        <div>
-          ⌛ Timer <span>{timer} </span>
-        </div>
+    <div className="max-w-screen-xl mx-auto p-5 sm:p-8 md:p-12 relative">
+      <div className="max-w-2xl mx-auto">
+        <dl className="grid overflow-hidden text-lg border-none text-center sm:grid-cols-1 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4 xl:divide-y-0">
+          <div>
+            ⌛ Timer <span>{timer}</span>
+          </div>
 
-        <div>
-          ❌ Mistakes <span>{mistakes}</span>
-        </div>
+          <div>
+            ❌ Mistakes <span>{mistakes}</span>
+          </div>
 
-        <div>
-          🎯 Accuracy <span>{scoreEarned.toFixed(1) + "%"}</span>
-        </div>
+          <div>
+            🅰 CapsLk <span>{capsLock ? "On" : "Off"}</span>
+          </div>
 
-        <div>
-          🅰 CapsLk <span>{capsLock ? "On" : "Off"}</span>
+          <div>
+            🎯 Accuracy <span>{scoreEarned.toFixed(1) + "%"}</span>
+          </div>
+        </dl>
+
+        <div className="mt-3 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+          <div className={`${styles.text} text-base leading-8 my-5 text-xl`}>
+            {renderText()}
+          </div>
+
+          <input
+            type="text"
+            value={input}
+            ref={inputRef}
+            onChange={handleChange}
+            className="sr-only"
+            placeholder="Start typing..."
+            readOnly={isCompleted}
+          />
         </div>
       </div>
-
-      <div className={styles.text}>{renderText()}</div>
-
-      <input
-        type="text"
-        value={input}
-        ref={inputRef}
-        onChange={handleChange}
-        className="sr-only"
-        placeholder="Start typing..."
-        readOnly={isCompleted}
-      />
     </div>
   );
 }

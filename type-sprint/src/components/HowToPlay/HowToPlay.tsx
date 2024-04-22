@@ -13,7 +13,7 @@ export default function HowToPlay({ startGame }: HowToPlayProps) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="white"
             className="w-6 h-6 text-gray-100"
           >
             <path
@@ -28,7 +28,7 @@ export default function HowToPlay({ startGame }: HowToPlayProps) {
           </h2>
         </div>
 
-        <div className="mt-8 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-1 lg:grid-cols-3  lg:divide-y-0 xl:grid-cols-3">
+        <div className="mt-8 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-2xl border text-gray-600 border-gray-700 sm:grid-cols-1 lg:grid-cols-3  lg:divide-y-0 xl:grid-cols-3">
           <Step
             description="Type the text within 60 seconds"
             header="60 seconds"
