@@ -125,33 +125,35 @@ export default function App() {
 
   return (
     <div className={styles.wrapper}>
-      {!isFocused ? (
-        <HowToPlay startGame={focusInput} />
-      ) : (
-        <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
-          {isCompleted ? (
-            <FinalScore
-              WPM={calculateWPM(startTime, endTime, enteredText)}
-              charactersTyped={enteredText.length}
-              mistakes={mistakes}
-              scoreEarned={scoreEarned}
-              restartGame={restartGame}
-            />
-          ) : (
-            <GameScreen
-              currentText={currentText}
-              input={enteredText}
-              timer={timer}
-              isCompleted={isCompleted}
-              mistakes={mistakes}
-              scoreEarned={scoreEarned}
-              capsLock={isCapsLockOn}
-              inputRef={inputRef}
-              handleChange={handleChange}
-            />
-          )}
-        </div>
-      )}
+      <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-800">
+        {!isFocused ? (
+          <HowToPlay startGame={focusInput} />
+        ) : (
+          <>
+            {isCompleted ? (
+              <FinalScore
+                WPM={calculateWPM(startTime, endTime, enteredText)}
+                charactersTyped={enteredText.length}
+                mistakes={mistakes}
+                scoreEarned={scoreEarned}
+                restartGame={restartGame}
+              />
+            ) : (
+              <GameScreen
+                currentText={currentText}
+                input={enteredText}
+                timer={timer}
+                isCompleted={isCompleted}
+                mistakes={mistakes}
+                scoreEarned={scoreEarned}
+                capsLock={isCapsLockOn}
+                inputRef={inputRef}
+                handleChange={handleChange}
+              />
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
