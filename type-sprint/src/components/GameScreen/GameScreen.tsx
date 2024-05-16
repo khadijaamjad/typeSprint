@@ -67,19 +67,19 @@ export default function GameScreen({
     <div className="max-w-screen-xl mx-auto p-5 sm:p-8 md:p-12 relative">
       <div className="max-w-2xl mx-auto">
         <dl className="grid overflow-hidden text-lg border-none text-center sm:grid-cols-1 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4 xl:divide-y-0">
-          <div>
+          <div className="correctChar">
             ⌛ Timer <span>{timer}</span>
           </div>
 
-          <div>
+          <div className="correctChar">
             ❌ Mistakes <span>{mistakes}</span>
           </div>
 
-          <div>
+          <div className="correctChar">
             🅰 CapsLk <span>{capsLock ? "On" : "Off"}</span>
           </div>
 
-          <div>
+          <div className="correctChar">
             🎯 Accuracy <span>{scoreEarned.toFixed(1) + "%"}</span>
           </div>
         </dl>
